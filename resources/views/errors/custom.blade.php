@@ -1,0 +1,1 @@
+{{ trans('lanKey.ex_details') }} <b>{{ $exception->getMessage() }}</b>

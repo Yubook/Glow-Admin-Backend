@@ -1,0 +1,89 @@
+.sidebar-filter {
+    transition: all 0.3s ease;
+    width: 250px;
+    z-index: 1001;
+    background: #ffffff;
+    bottom: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    box-shadow: 3px 0 7px 0px rgba(0, 0, 0, 0.18);
+    .btn-doc-filter {
+        position: absolute;
+        top: 50%;
+        z-index: 9999999;
+        left: 100%;
+        transform: translate(0, -50%);
+        padding: 20px 10px;
+        border: 0;
+        background-color: #fff;
+        border-radius: 0px 6px 6px 0;
+        box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.3);
+        span {
+            writing-mode: vertical-rl;
+            font-size: 22px;
+            font-weight: 600;
+            color: $primary-color;
+        }
+    }
+    .vertical-menu {
+        position: relative;
+        top: 0;
+    }
+    &.close {
+        transform: translateX(-100%);
+    }
+}
+
+.doc-compare {
+    background-color: $header-dark-item-color;
+    svg,
+    img {
+        max-height: 77vh;
+    }
+}
+
+.find-doc-result {
+    .slick-slide {
+        max-height: 113px;
+        overflow: hidden;
+        margin: 0 5px;
+    }
+    .slick-next {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(-90deg, $primary-color, transparent);
+        color: #fff;
+        border: 0;
+    }
+    .slick-prev {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, $primary-color, transparent);
+        color: #fff;
+        border: 0;
+    }
+    .slick-arrow {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 18px;
+        padding: 0 12px;
+        transition: all 0.3s ease;
+        &.slick-disabled {
+            //cursor: not-allowed;
+            display: none;
+        }
+    }
+    &:hover,
+    &:focus {
+        .slick-arrow {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

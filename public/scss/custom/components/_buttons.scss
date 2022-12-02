@@ -1,0 +1,48 @@
+// 
+// _buttons.scss
+// 
+button,
+a {
+    outline: none !important;
+}
+
+// Rounded Buttons
+.btn-rounded {
+    border-radius: 30px;
+}
+
+.btn-dark,
+.btn-secondary {
+    color: $gray-200 !important;
+}
+
+.btn-outline-light {
+    color: $gray-900;
+}
+
+.btn- {
+    &primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: lighten($color: $primary-color, $amount: 5%) !important;
+            border-color: lighten($color: $primary-color, $amount: 5%) !important;
+            -webkit-box-shadow: 0 0 0 0.15rem rgba($primary-color, 0.5);
+            box-shadow: 0 0 0 0.15rem rgba($primary-color, 0.5);
+        }
+    }
+    &outline-primary {
+        border-color: $primary-color;
+        color: $primary-color;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: lighten($color: $primary-color, $amount: 5%) !important;
+            border-color: lighten($color: $primary-color, $amount: 5%) !important;
+            -webkit-box-shadow: 0 0 0 0.15rem rgba($primary-color, 0.5);
+            box-shadow: 0 0 0 0.15rem rgba($primary-color, 0.5);
+        }
+    }
+}
